@@ -24,7 +24,7 @@ const Header = () => {
               <div id="friend-8" className="profile-page-display-friend"></div>
             </div>
             <div className="main-display-buttons">
-              <button className="bg-secondary text-dark">Edit Profile</button>
+              <button className="bg-muted text-dark">Edit Profile</button>
               <button className="bg-primary text-light">Add to Story</button>
             </div>
           </div>

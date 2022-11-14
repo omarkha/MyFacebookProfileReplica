@@ -81,7 +81,7 @@ nav {
 }
 
 header {
-  background-color: #fff;
+  background: -webkit-linear-gradient(rgb(25, 25, 25), #fff, #fff);
   box-shadow: 0 0 5px rgb(160, 160, 160);
 }
 
@@ -157,6 +157,7 @@ header {
 
 .profile-nav {
   display: flex;
+  padding: 0;
 }
 
 .profile-nav ul {
@@ -164,16 +165,33 @@ header {
 }
 
 .profile-nav ul li {
+  cursor: default;
   display: inline;
-  margin: 0 13px;
+  margin: 0 10px;
   font-weight: bolder;
+  color: rgb(101, 101, 101);
+  padding: 13px;
+  font-size: 15px;
+}
+
+.profile-nav ul li:first-child {
+  border-bottom: 3px solid rgb(25, 101, 240);
+}
+
+.profile-nav ul li:hover {
+  background-color: rgb(230, 230, 230);
   color: rgb(101, 101, 101);
 }
 
-aside {
+.side-content {
   width: 38%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
   border-radius: 8px;
-  margin: 12px;
+  margin: 12px 0;
   height: fit-content;
   background-color: #fff;
   grid-column: 1/3;
@@ -189,13 +207,14 @@ aside h4 {
 .profile-body {
   display: flex;
   flex-direction: row;
+  gap: 12px;
 }
 .postsection {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
   background-color: #fff;
-  margin: 12px;
+  margin: 12px 0;
   width: 100%;
   height: fit-content;
 }
@@ -279,7 +298,7 @@ aside .listed-info ul {
   border-radius: 12px;
   background-color: #fff;
   padding: 12px;
-  margin: 12px;
+  margin: 12px 0;
   width: 100%;
   height: fit-content;
   background-color: #fff;
@@ -352,4 +371,31 @@ aside .listed-info ul {
 
 .post .post-options button:hover {
   background: rgb(240, 240, 240);
+}
+
+.photos-sidebar {
+  background-color: #fff;
+  border-radius: 12px;
+  height: fit-content;
+  padding: 12px;
+}
+.photos-sidebar .top h4 {
+  text-align: left;
+  font-weight: bolder;
+  font-size: 21px;
+}
+.side-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.side-photos .side-photo {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  border-radius: 2px;
 }

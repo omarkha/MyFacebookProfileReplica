@@ -9,19 +9,17 @@ const Post = (props) => {
           <div id="profilepic"></div>
           <div className="nameanddate">
             <h6>Omar Khalil</h6>
-            <h6 className="date text-muted">November 8 at 2:33 AM</h6>
+            <h6 className="date text-muted">{props.dateandtime}</h6>
           </div>
         </div>
 
         <BsThreeDots id="topdots" />
       </div>
-      <div className="content-text">
-        Just finished coding my Portfolio Website. Check it Out and hmu for a
-        FREE website! <br />
-        <br />
-        <a>https://omarkhalil34v.netlify.app</a>
-      </div>
-      <div className="content-media"></div>
+      <div className="content-text">{props.textContent}</div>
+      <div
+        className="content-media"
+        style={{ backgroundImage: `url("${props.img}")` }}
+      ></div>
       <hr />
       <div className="post-options">
         <button>Like</button>
